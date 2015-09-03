@@ -1,0 +1,49 @@
+/*
+
+a:hover {
+	color: #cc0000;
+	font-weight: bold;
+	text-decoration: none;
+}
+*/
+div{
+    height: 40px;
+    position:absolute;
+    background-color: #aaaaaa;
+    top:-10px;
+}
+ul{
+    top:-5px;
+    position: fixed;
+    margin-left: 35%;
+}
+li{
+    border-radius: 5%;
+    border-bottom: 30%;
+    top: -5px;
+    height: 35px;
+    background-color:#333333;
+    display: inline;
+    margin: middle;
+    position:relative;
+    padding: 14px;
+}
+li1{
+    
+    padding: 10px;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+img{
+    
+    padding-top: 10px;
+    
+}
+body{
+    background-color: #CCCCCC;
+    
+}
+top
+	

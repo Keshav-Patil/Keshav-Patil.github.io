@@ -1,0 +1,120 @@
+
+#navigator{
+    background-color: cadetblue;
+    display: inline-block;
+    width: 50%;
+    height: 60px;
+    position:relative;
+    background-color: cornflowerblue;
+    top:-10px;
+}
+li{
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    height: 60px;
+    background-color: cadetblue;
+    padding: 20px 30px 0px 30px;
+    align-content: center;
+}
+ul{
+
+    top:0px;
+    position: fixed;
+    margin-left: 50%;
+    background-color: cadetblue;
+    width: 100%;
+}
+#topbar{
+    background-color: cadetblue;
+    width: 100%;
+    height: 60px;
+}
+a{
+    color: black;
+}
+#mainbar{
+	display: inline-block;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+	display: fixed;
+	z-index:1;
+}
+li:hover{
+    background-color: aqua;
+
+}
+a:hover{
+    text-decoration: none;
+    color: brown;
+}
+#logo{
+    position: relative;
+    top: -2px;
+    left: 30px;
+    width: 120px;
+    height:100px;
+    border-radius:0% 0% 10% 10%;
+    border: 2px solid black;
+    opacity: 1 ;
+	z-index: 1;
+
+}
+#top1{
+    float: left;
+    background-color: darkcyan;
+    width: 100%;
+    height: 500px;
+}
+#plain {
+    opacity: 1;
+    width: 31%;
+    height: auto;
+    margin: 100px 60px 0px 20px;
+}
+
+#1st_img{
+	display: inline-block;
+	position:absolute;
+	margin-top: - 300px;
+	float: right;
+	background-color:#000;
+}
+body{
+	background-image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSqxCH61WNyScjUM3cSIg0qBKCblraGAVl0CpMPWlOBsCyactoBYA";
+}
+#anchor1{
+	
+	height: 50px;
+	width:150px;  
+	float: right;
+	text-align: center; 
+	padding-top: 17px;
+	margin: -150px 12px 0px 0px;
+	z-index: 1;	
+}
+.panel{
+	 z-index:0; 
+    -webkit-transform: translateZ( 0 );
+    transform: translateZ( 0 );
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+a[ id= "anchor1" ]:target ~ #below   .panel{
+	
+
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+}
+#tpro{
+	
+	position: relative;
+	width: 95%;
+	height: 500px;
+	margin:70px 30px;
+	z-index: -1;
+}

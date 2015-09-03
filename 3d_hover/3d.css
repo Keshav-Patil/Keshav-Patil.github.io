@@ -1,0 +1,72 @@
+/*custom font - Montserrat*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/*basic reset*/
+* 
+/*forcing the body to take 100% height*/
+
+/*a nice BG*/
+
+/*Thumbnail Background*/
+.thumb {
+	display: inline-block;
+	position: relative;
+	width: 250px; height: 270px;
+		margin: 40px 40px;
+		padding: 0px 0px;
+	perspective: 1000px;
+}
+.thumb a {
+	display: block; width: 100%; height: 100%;
+	/*double layered BG for lighting effect*/
+	background: 
+		linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), 
+		url("http://www.almamaterstore.in/media/catalog/product/cache/5/thumbnail/280x299/9df78eab33525d08d6e5fb8d27136e95/e/n/entrepreneur_tee.jpg");
+	/*disabling the translucent black bg on the main image*/
+	background-size: 0, cover;
+	/*3d space for children*/
+	transform-style: preserve-3d;
+	transform: rotateX(10deg) ;  width: auto;
+	transition: all 0.3s;
+}
+.thumb:hover a {transform: rotateX(0deg);    transform-origin: bottom;}
+/*bottom surface */
+.thumb a:after {
+	/*36px high element positioned at the bottom of the image*/
+	content: ''; position: absolute; left: 0; bottom: 0; 
+	width: 100%; height: 36px;
+	/*inherit the main BG*/
+	background-color:#ccc ; background-size: cover, cover;
+	
+	/*draw the BG bottom up*/
+	background-position: ;
+	/*rotate the surface 90deg on the bottom axis*/
+	transform: rotateX(90deg); transform-origin: bottom;
+}
+/*label style*/
+.thumb a span {
+	color: #07a; text-transform: uppercase;
+	position: absolute; top: 100%; left: 0; width: 100%; height: 50px;
+	font: bold 12px/36px Montserrat; text-align: center;
+	/*the rotation is a bit less than the bottom surface to avoid flickering*/
+	transform: rotateX(); transform-origin: top;
+	z-index: 1;
+}
+/*shadow*/
+.thumb a:before {
+	opacity: 1;
+	/*blurred effect using box shadow as filter: blur is not supported in all browsers*/
+	box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+	/*pushing the shadow down and scaling it down to size*/
+	transform: rotateX(0) translateZ(-60px) scale(0.85);
+}
+.thumb:hover a:before {
+	content: ''; position: absolute; top: -40px; left: 0;
+	width: 100%; height: 100%;
+	background: rgba(0, 0, 0, 0.5); 
+	box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+	transition: all 0.5s; 
+	/*by default the shadow will be almost flat, very transparent, scaled down with a large blur*/
+	opacity: 0.15;
+	transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+	transform-origin: bottom;
+}
